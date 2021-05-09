@@ -17,6 +17,14 @@ npm i
 ```
 
 ## Run
+
+You can run the sever and app on your local machine:
+
+```bash
+node server.js
+```
+
+
 You can access the user study experiments:
 
 ```bash
