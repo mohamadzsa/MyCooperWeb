@@ -1,4 +1,5 @@
-# MY Cooper Web based Voice Assistant including (AI voice, Male Voice and Female Voice)
+# MY Cooper Web based Voice Assistant 
+Three voice assistant prototypes including (AI voice, Male Voice and Female Voice)
 
 ## Requirements
 To have the full functionality this app requires to run on a node server.
