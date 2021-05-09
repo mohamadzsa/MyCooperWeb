@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MY Cooper</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/styleNew.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container-full">
+      <div class="main">
+        <div class="row">
+          <div class="seven columns">
+            <h4 class="text-center">Experiment (AI Voice)</h4>
+            <div class="row text-center">
+              <div class="step-message-holder">
+                <img
+                  id="voiceIntIcon"
+                  class="voiceIntIcon"
+                  src="../images/voiceint.svg"
+                  alt=""
+                />
+                <div class="currentStep" id="currentStep">
+                  <div class="stepNumberInd" id="stepNumberInd"></div>
+                  <div class="stepMessage" id="stepMessage">
+                    <span style="font-weight: bold"
+                      >Please click on the Mic button bellow to start reading
+                      instructions</span
+                    >
+                    <br />
+                    <img width="50" src="../images/arrow-down.svg" alt="" />
+                  </div>
+                  <audio id="stepAudio" autoplay="autoplay"></audio>
+                </div>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="utter-message-holder">
+                <div class="utter-message">
+                  <div id="userUtter" class="userUtter"></div>
+                  <div class="notListening" id="notListening"></div>
+                </div>
+
+                <button
+                  type="button"
+                  onclick="sayItLoud()"
+                  class="button-primary submit-btn speak-btn"
+                  id="speakBtn"
+                >
+                  <img class="micIcon" src="../images/mic.svg" alt="" />
+                </button>
+                <p id="btndes"></p>
+              </div>
+            </div>
+          </div>
+          <div class="five columns">
+            <div class="row">
+              <a
+                href="./step05.html"
+                class="button-primary submit-btn step-submit jumpnext ishiddn"
+                id="jumpnext"
+              >
+                Next Step >></a
+              >
+            </div>
+            <div class="row">
+              <p></p>
+              <p></p>
+              <p>
+                You can use following words in order to control the voice
+                assistant:
+              </p>
+            </div>
+            <div class="row words-sections">
+              <h5 class="helper-title">Go to the next step:</h5>
+              <ul>
+                <li>Continue</li>
+                <li>Next</li>
+              </ul>
+            </div>
+            <div class="row words-sections">
+              <h5 class="helper-title">Repeat the last Instruction:</h5>
+              <ul>
+                <li>Repeat</li>
+                <li>Again</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/readexp2.js"></script>
+</html>

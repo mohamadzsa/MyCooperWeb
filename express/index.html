@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MY Cooper</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:500,400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/styleNew.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h4>MY Cooper</h4>
+        <div class="row">
+          <div class="twelve columns"> 
+            <h5>Introduction</h5>
+            <p>
+              I'm Mohamad Salehi and studying Digital Media at the University of
+              Bremen. I'm doing my master thesis at the digital media lab (TZI)
+              and this research study is about a voice assistant helping the user
+              to follow instructions during an already defined procedure. In
+              this research study, you will interact with three prototypes, and
+              It will take around 30 minutes of your time. <br />
+              In case of any issues or further questions  you can reach me out
+              through <a href="mailto:mohamadz@uni-bremen.de">mohamadz@uni-bremen.de</a>   <br />Thanks in advance for your
+              participation.
+            </p>
+            <h5>Data storage agreement</h5>
+            <p>
+              Consent for Participation and anonymous Data Storage: I certify
+              that I have read this document and am well-informed about this
+              experiment's motivation and procedure. I agree that the data
+              resulting from my participation in this study will be subject to
+              anonymous scientific analysis and publication. I am aware that all
+              data are processed and analyzed without using my name and are only
+              collected using a participant ID (if applicable). I am aware that
+              my participation in this study is voluntary and that I may
+              withdraw from participation at any time without explicit reason
+              and with no further consequences. Already collected data will then
+              be deleted, and no connection to my person is further possible. In
+              the case of anonymized data storage, my data cannot be deleted at
+              my request. I agree that my data is stored after the end of the
+              study and will be deleted at the latest after 10 years as far as
+              legal requirements don’t demand longer archiving periods.
+            </p>
+          </div>
+          <!-- <div class="four columns"></div> -->
+        </div>
+        <div class="row">
+          <a onclick="prepareData()" href="./step01.html" class="button-primary submit-btn step-submit">
+            I agree
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function prepareData(){
+        fetch("/userID", {
+          method: "post",
+          body: "Consent approved",
+        }).then((response) => {
+          console.log(response);
+          
+        });
+        window.location = "./step01.html";
+      }
+    </script>
+  </body>
+</html>

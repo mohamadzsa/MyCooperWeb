@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Cooper</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="media-plan-wrp twelve column" style="margin-top: 5%">
+          <p id="message" hidden aria-hidden="true">
+            Your browser doesn't support Speech Recognition. Sorry.
+          </p>
+
+          <div class="row">
+            <div class="five columns">
+              <h4>Overall View (End result)</h4>
+              <img
+                id="oview"
+                class="oview"
+                src="./images/Steps/oview.jpg"
+                alt=""
+              />
+            </div>
+            <div class="seven columns">
+              <div class="row">
+                <h4>Create a new Instruction</h4>
+                <div id="stepdes">Tip: (state) activate --> deactivate</div>
+                <div class="row">
+                  <div class="six columns">
+                    <h5>Current Look:</h5>
+                    <img
+                      id="steppic"
+                      class="stepImage"
+                      src="./images/Steps/step0.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="six columns">
+                    <h5>Should be like:</h5>
+                    <img
+                      id="stepbpic"
+                      class="stepImage"
+                      src="./images/Steps/stepb0.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="submit-wrp">
+            <button
+              id="recStartBtn"
+              type="button"
+              onclick="startRecording()"
+              class="button-primary submit-btn"
+            >
+              Record
+            </button>
+            <button
+              id="recStopBtn"
+              type="button"
+              onclick="stopRecording()"
+              class="button-primary stop-btn"
+            >
+              Stop
+            </button>
+            <button
+              id="skipBtn"
+              type="button"
+              onclick="skipStep()"
+              class="button-primary btnSkip"
+            >
+              Skip
+            </button>
+          </div>
+          <h4>Recorded Instructions:</h4>
+          <div class="row">
+            <div id="allSteps" class="eight columns"></div>
+            <div class="four columns" id="allPics"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/WebAudioRecorder.min.js"></script>
+    <script src="js/mainScript-voice.js"></script>
+  </body>
+</html>
